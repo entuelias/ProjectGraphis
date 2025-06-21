@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: white;
+}
+
+#landing-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/bg01.jpg');
+    background-size: cover;
+}
+H1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: whitesmoke;
+  text-shadow: 0 0 10px #000, 0 0 20px gold;
+  z-index: 999;
+  letter-spacing: 4px;
+  animation: glow 2s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.intro {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(244, 255, 146);
+  text-shadow: 0 0 20px gold;
+  z-index: 999;
+  letter-spacing: 4px;
+  animation: glow 2s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.weapon-selection {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding-top: 100px;
+}
+
+.weapon {
+    background: rgba(255,255,255,0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.weapon:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-5px);
+}
+
+.weapon.selected {
+    border: 2px solid gold;
+}
+
+.weapon img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#start-game {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background:gold;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#start-game:hover {
+    background:rgb(248, 222, 72);
+    transform: scale(1.1);
+}
+
+#game-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#crosshair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+#score, #ammo {
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    pointer-events: none;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+#score {
+    top: 20px;
+    right: 20px;
+}
+
+#ammo {
+    top: 20px;
+    left: 20px;
+}
+
+#instructions {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}

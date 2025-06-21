@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Game - Three.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="landing-page">
+        <h1>BULLETSTORM GAMES</h1>
+        <div class="intro">
+            <p>Choose your weapon to begin</p>
+        </div>
+        <div class="weapon-selection">
+            <div class="weapon" data-weapon="pistol">
+                <img src="assets/pistol.png" alt="Pistol">
+                <h3>Pistol</h3>
+                <div class="weapon-details">
+                    <p><b>level: </b>EASY</p>
+                    <p> Score 300 points in 30 seconds</p>
+                </div>
+            </div>
+            <div class="weapon" data-weapon="rifle">
+                <img src="assets/rifle.png" alt="Rifle">
+                <h3>Rifle</h3>
+                <div class="weapon-details">
+                    <p><b>level: </b>MEDIUM</p>
+                    <p> Score 600 points in 30 seconds</p>
+                </div>
+            </div>
+            <div class="weapon" data-weapon="shotgun">
+                <img src="assets/shotgun.png" alt="Shotgun">
+                <h3>Shotgun</h3>
+                <div class="weapon-details">
+                    <p><b>level: </b>HARD</p>
+                    <p> Score 800 points in 30 seconds</p>
+                </div>
+            </div>
+        </div>
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="crosshair">+</div>
+        <div id="score">Score: <span id="score-value">0</span></div>
+        <div id="ammo">Ammo: <span id="ammo-value">30</span></div>
+        <div id="instructions">
+            Click to start<br>
+            WASD - Move<br>
+            Mouse - Look around<br>
+            Click - Shoot<br>
+            R - Reload<br>
+            ESC - Pause
+        </div>
+    </div>
+
+    <!-- Three.js and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <!-- Game scripts -->
+    <script src="js/controls.js"></script>
+    <script src="js/weapons.js"></script>
+    <script src="js/environment.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
